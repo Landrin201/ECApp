@@ -1,3 +1,5 @@
+--Be sure to add a presidents database with a user who can edit it
+
 --DROP TABLE presidents.state;
 
 CREATE TABLE presidents.state (
