@@ -42,7 +42,7 @@ create table presidents.electors_info(
 			references presidents.election_years(election_year)
 );
 
-drop table presidents.eligibility;
+--drop table presidents.eligibility;
 
 create table presidents.eligibility(
 	eligibility_id int unique generated always as identity,

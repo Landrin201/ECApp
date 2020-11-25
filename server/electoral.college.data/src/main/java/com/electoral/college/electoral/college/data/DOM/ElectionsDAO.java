@@ -1,10 +1,12 @@
 package com.electoral.college.electoral.college.data.DOM;
 
+import com.electoral.college.electoral.college.data.Rest.NewStateEndpoint;
 import com.electoral.college.electoral.college.data.pojos.ElectionYear;
 import com.electoral.college.electoral.college.data.pojos.State;
 import com.electoral.college.electoral.college.data.pojos.StateElections;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -18,7 +20,7 @@ public class ElectionsDAO {
     //Select statements
     private String getCandidateResultsPerYear = "SELECT * from candidate_results ;";
 
-    private final Logger logger = LogManager.getLogger(ElectionsDAO.class);
+    private final Logger logger = LoggerFactory.getLogger(ElectionsDAO.class);
     private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 

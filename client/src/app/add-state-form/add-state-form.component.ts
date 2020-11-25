@@ -24,12 +24,10 @@ onClear(){
 }
 
 onSubmit(){
+  console.log("Called onSubmit");
   if(this.service.form.valid){
     this.service.submitForm();
-  } else{
-    
   }
-
 }
 
 }

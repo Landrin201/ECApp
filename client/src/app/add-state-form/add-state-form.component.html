@@ -24,27 +24,27 @@
       <div class="controls-container">
         <mat-form-field>
           <mat-label>Year Incorporated</mat-label>
-          <input matInput formControlName="yearIncorporated">
-          <mat-error *ngIf="service.form.controls['yearIncorporated'].errors?.required">Required Field</mat-error>
-          <mat-error *ngIf="service.form.controls['yearIncorporated'].errors?.minlength">Must be 4 numbers</mat-error>
-          <mat-error *ngIf="service.form.controls['yearIncorporated'].errors?.maxlength">Must be 4 numbers</mat-error>
-          <mat-error *ngIf="service.form.controls['yearIncorporated'].errors?.pattern">Field must only contain numbers</mat-error>
+          <input matInput formControlName="yearStateAddedToUs">
+          <mat-error *ngIf="service.form.controls['yearStateAddedToUs'].errors?.required">Required Field</mat-error>
+          <mat-error *ngIf="service.form.controls['yearStateAddedToUs'].errors?.minlength">Must be 4 numbers</mat-error>
+          <mat-error *ngIf="service.form.controls['yearStateAddedToUs'].errors?.maxlength">Must be 4 numbers</mat-error>
+          <mat-error *ngIf="service.form.controls['yearStateAddedToUs'].errors?.pattern">Field must only contain numbers</mat-error>
         </mat-form-field>
       </div>
 
       <div class="controls-container">
         <mat-form-field>
           <mat-label>Current Population</mat-label>
-          <input matInput formControlName="currentPopulation">
-          <mat-error *ngIf="service.form.controls['currentPopulation'].errors?.required">Required Field</mat-error>
-          <mat-error *ngIf="service.form.controls['currentPopulation'].errors?.maxLength">Must be up to 8 numbers</mat-error>
-          <mat-error *ngIf="service.form.controls['currentPopulation'].errors?.pattern">Field must only contain numbers</mat-error>
+          <input matInput formControlName="currentPopulationEstimate">
+          <mat-error *ngIf="service.form.controls['currentPopulationEstimate'].errors?.required">Required Field</mat-error>
+          <mat-error *ngIf="service.form.controls['currentPopulationEstimate'].errors?.maxLength">Must be up to 8 numbers</mat-error>
+          <mat-error *ngIf="service.form.controls['currentPopulationEstimate'].errors?.pattern">Field must only contain numbers</mat-error>
 
         </mat-form-field>
       </div>
 
       <div class="button-row">
-        <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid" (click)="onSubmit()">Submit</button>
         <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
 
       </div>

@@ -54,7 +54,7 @@ import { StateAddServiceService } from './shared/state-add-service.service';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'homepage', component: HomepageComponent },
+      { path: '', component: HomepageComponent },
       { path: 'addState', component: AddStateFormComponent }
     ]),
     MatAutocompleteModule,
